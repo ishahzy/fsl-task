@@ -19,19 +19,19 @@ jobs:
         with:
           node-version: '14'
 
-        - name: Install dependencies
-          run: npm install
+      - name: Install dependencies
+        run: npm install
 
-        - name: Run linter
-          run: npm run lint
+      - name: Run linter
+        run: npm run lint
 
-        - name: Run formatter
-          run: npm run prettier
+      - name: Run formatter
+        run: npm run prettier
 
-        - name: Run tests
-          env: 
-            CI: true
-          run: npm run test
+      - name: Run tests
+        env: 
+          CI: true
+        run: npm run test
 
-        - name: Build project
-          run: npm run build
+      - name: Build project
+        run: npm run build
